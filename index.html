@@ -2,8 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>اذكار - حصن المسلم</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>تمتم - حصن المسلم</title>
 <style>
 :root {
   --primary: #1a6b3c;
@@ -68,7 +68,7 @@ html, body { height:100%; overflow:hidden; font-family:'Segoe UI',Tahoma,sans-se
 .icon-btn:active { background:rgba(255,255,255,0.3); }
 
 /* Screens */
-.screen { flex:1; overflow-y:auto; overflow-x:hidden; padding-bottom:70px; animation:fadeIn 0.25s ease; }
+.screen { flex:1; overflow-y:auto; overflow-x:hidden; padding-bottom:0; animation:fadeIn 0.25s ease; }
 .screen.hidden { display:none; }
 @keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
 @keyframes slideInRight { from{opacity:0;transform:translateX(30px)} to{opacity:1;transform:translateX(0)} }
@@ -82,8 +82,8 @@ html, body { height:100%; overflow:hidden; font-family:'Segoe UI',Tahoma,sans-se
 @keyframes floatUp { from{opacity:1;transform:translateY(0)} to{opacity:0;transform:translateY(-50px)} }
 
 /* Bottom Nav */
-.bottom-nav { position:fixed; bottom:0; left:0; right:0; height:64px; background:var(--nav-bg); border-top:1px solid var(--border); display:flex; align-items:stretch; z-index:100; box-shadow:0 -4px 20px var(--shadow); }
-.nav-item { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; cursor:pointer; color:var(--text3); transition:color 0.2s; border:none; background:none; padding:4px 0; }
+.bottom-nav { position:relative; flex-shrink:0; min-height:64px; padding-bottom:env(safe-area-inset-bottom, 0px); background:var(--nav-bg); border-top:1px solid var(--border); display:flex; align-items:stretch; z-index:100; box-shadow:0 -4px 20px var(--shadow); }
+.nav-item { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; gap:3px; cursor:pointer; color:var(--text3); transition:color 0.2s; border:none; background:none; padding:12px 0 4px; }
 .nav-item.active { color:var(--primary); }
 .nav-item svg { width:22px; height:22px; }
 .nav-item span { font-size:10px; font-weight:600; }
